@@ -16,6 +16,9 @@ public class UserService {
 
     public List<User> findAll(){
         return repo.findAll();
+    }
 
+    public User findById(String id) {
+        return repo.findById(id).orElseThrow(() -> new com.augustocarrera.workshopmongo.exception.ObjectNotFoundException("User not found"));
     }
 }
