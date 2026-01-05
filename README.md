@@ -62,7 +62,7 @@ O sistema gerencia um domínio de interações sociais, permitindo:
 
 1.  Clone o repositório:
     ```bash
-    git clone [https://github.com/SEU-USUARIO/SpringMongo-Social-API.git](https://github.com/SEU-USUARIO/SpringMongo-Social-API.git)
+    git clone https://github.com/augustocarrera/SpringMongo-Social-API.git
     ```
 
 2.  Acesse a pasta do projeto:
