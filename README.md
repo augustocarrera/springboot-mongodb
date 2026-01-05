@@ -95,5 +95,5 @@ Você pode testar os endpoints utilizando ferramentas como **Postman** ou **Thun
 * [cite_start]`GET /posts/titlesearch?text=bom%20dia` - Busca posts por título[cite: 582].
 * [cite_start]`GET /posts/fullsearch?text=viagem&minDate=2018-01-01&maxDate=2018-05-01` - Busca avançada por texto e período[cite: 597].
 
-## 👨‍🏫 Créditos
-Este projeto foi desenvolvido baseado no material do **Prof. [cite_start]Dr. Nelio Alves**[cite: 372].
+##  Créditos
+Este projeto foi desenvolvido baseado no material do **Prof.Dr. Nelio Alves**.
