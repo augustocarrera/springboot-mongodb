@@ -1,6 +1,7 @@
 package com.augustocarrera.workshopmongo.services;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,15 +20,18 @@ public class UserService {
         return repo.findAll();
     }
 
-    public User findById(String id) {
+    public User findById(UUID id) {
         return repo.findById(id).orElseThrow(() -> new com.augustocarrera.workshopmongo.exception.ObjectNotFoundException("User not found"));
     }
 
     public User insert(User obj){
+        if (obj.getId() == null) {
+            obj.setId(UUID.randomUUID());
+        }
         return repo.insert(obj);
     }
 
-    public void delete(String id) {
+    public void delete(UUID id) {
         findById(id);
         repo.deleteById(id);
     }

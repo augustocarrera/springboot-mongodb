@@ -1,12 +1,13 @@
 package com.augustocarrera.workshopmongo.dto;
 
 import java.io.Serializable;
+import java.util.UUID;
 
 import com.augustocarrera.workshopmongo.domain.User;
 
 public class UserDTO implements Serializable{
 
-    private String id;
+    private UUID id;
     private String name;
     private String email;
 
@@ -19,11 +20,11 @@ public class UserDTO implements Serializable{
         email = obj.getEmail();
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

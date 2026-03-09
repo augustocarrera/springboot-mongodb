@@ -3,6 +3,7 @@ package com.augustocarrera.workshopmongo.domain;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -12,7 +13,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User implements Serializable{
 
     @Id
-    private String id;
+    private UUID id;
     private String name;
     private String email;
 
@@ -30,18 +31,18 @@ public class User implements Serializable{
     public User(){      
     }
 
-    public User(String id, String name, String email) {
+    public User(UUID id, String name, String email) {
         super();
         this.id = id;
         this.name = name;
         this.email = email;
     }
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

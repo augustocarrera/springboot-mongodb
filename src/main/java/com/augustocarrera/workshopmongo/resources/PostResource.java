@@ -2,6 +2,7 @@ package com.augustocarrera.workshopmongo.resources;
 
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,7 +23,7 @@ public class PostResource {
 	private PostService service;
 
 	@RequestMapping(value="/{id}", method=RequestMethod.GET)
- 	public ResponseEntity<Post> findById(@PathVariable String id) {
+	public ResponseEntity<Post> findById(@PathVariable UUID id) {
 		Post obj = service.findById(id);
 		return ResponseEntity.ok().body(obj);
 	}

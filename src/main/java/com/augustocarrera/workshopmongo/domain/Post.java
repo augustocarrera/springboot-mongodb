@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -15,7 +16,7 @@ import com.augustocarrera.workshopmongo.dto.CommentDTO;
 public class Post implements Serializable {
 
     @Id
-    private String id;
+    private UUID id;
     private Date date;
     private String title;
     private String body;
@@ -37,7 +38,7 @@ public class Post implements Serializable {
     }
 
 
-    public Post(String id, Date date, String title, String body, AuthorDTO author) {
+    public Post(UUID id, Date date, String title, String body, AuthorDTO author) {
         super();
         this.id = id;
         this.date = date;
@@ -47,12 +48,12 @@ public class Post implements Serializable {
     }
 
 
-    public String getId() {
+    public UUID getId() {
         return id;
     }
 
 
-    public void setId(String id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

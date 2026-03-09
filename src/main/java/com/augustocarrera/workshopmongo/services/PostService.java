@@ -3,6 +3,7 @@ package com.augustocarrera.workshopmongo.services;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,7 @@ public class PostService {
     @Autowired
     private PostRepository repo;
 
-	public Post findById(String id) {
+    public Post findById(UUID id) {
 		Optional<Post> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException("Objeto não encontrado"));
 	}
