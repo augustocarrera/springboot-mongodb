@@ -52,6 +52,24 @@ A estruturação dos dados no MongoDB utilizou dois conceitos principais para ot
 
 ## 🚀 Como executar o projeto
 
+Você pode rodar o projeto de duas formas: utilizando **Docker** (recomendado) ou de forma **Local**.
+
+### Opção 1: Via Docker (Recomendado)
+
+**Pré-requisitos:**
+* Docker Desktop instalado e rodando.
+
+**Passo a passo:**
+
+1.  Clone o repositório e acesse a pasta do projeto.
+2.  Execute o comando:
+    ```bash
+    docker compose up --build
+    ```
+*A API estará disponível em `http://localhost:8080`. O banco de dados e a carga inicial de dados serão configurados automaticamente pelo container.*
+
+### Opção 2: Execução Local
+
 ### Pré-requisitos
 * Java JDK 17 ou superior.
 * MongoDB instalado e rodando na porta `27017`.
@@ -96,4 +114,4 @@ Você pode testar os endpoints utilizando ferramentas como **Postman** ou **Thun
 
 ## 👨‍🏫 Créditos
 
-Este projeto foi desenvolvido como parte do estudo de Programação Orientada a Objetos e Spring Boot, baseado no material do **Prof.Dr. Nelio Alves**.
+Este projeto foi desenvolvido como parte do estudo de Programação Orientada a Objetos e Spring Boot, baseado no material do **Prof.Dr. Nelio Alves**, com adições pessoais.
