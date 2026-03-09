@@ -47,6 +47,7 @@ A estruturação dos dados no MongoDB utilizou dois conceitos principais para ot
 * **Design Patterns & Boas Práticas:**
     * **Layered Architecture:** Resource (Controller), Service e Repository.
     * **DTO (Data Transfer Object):** `UserDTO`, `AuthorDTO`, `CommentDTO` para projetar dados e proteger a entidade.
+    * **Identificadores Únicos (UUID):** Implementação de UUIDs para todas as entidades, garantindo maior segurança e independência do provedor de banco de dados.
     * **Exception Handling:** Tratamento global de erros com `@ControllerAdvice` e exceções personalizadas como `ObjectNotFoundException`.
     * **Database Seeding:** Carga inicial de dados para testes via `CommandLineRunner`.
 
